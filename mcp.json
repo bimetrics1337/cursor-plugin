@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "bimetrics": {
+      "url": "https://app.bimetrics.de/mcp",
+      "auth": {
+        "CLIENT_ID": "bimetrics-cursor",
+        "scopes": [
+          "mcp:read",
+          "mcp:write",
+          "offline_access"
+        ]
+      }
+    }
+  }
+}

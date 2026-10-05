@@ -1,0 +1,27 @@
+{
+  "name": "bimetrics",
+  "version": "1.0.0",
+  "description": "Buchhaltung für Selbstständige und Unternehmen: Belege hochladen, Rechnungen und E-Rechnungen erstellen, Zahlungen zuordnen.",
+  "author": {
+    "name": "bimetrics GmbH",
+    "email": "support@bimetrics.de"
+  },
+  "homepage": "https://bimetrics.de/mcp",
+  "license": "MIT",
+  "keywords": [
+    "buchhaltung",
+    "belege",
+    "rechnungen",
+    "rechnung schreiben",
+    "e-rechnung",
+    "angebote",
+    "ZUGFeRD",
+    "offene posten",
+    "DATEV",
+    "bankumsätze",
+    "accounting",
+    "invoices",
+    "e-invoicing"
+  ],
+  "logo": "assets/icon.png"
+}
