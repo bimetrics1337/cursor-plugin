@@ -1,6 +1,6 @@
 {
   "name": "bimetrics",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Buchhaltung für Selbstständige und Unternehmen: Belege hochladen und berichtigen, Rechnungen, Angebote und E-Rechnungen schreiben, Mahnungen erstellen, Zahlungen zuordnen.",
   "author": {
     "name": "bimetrics GmbH",
@@ -22,6 +22,8 @@
     "ZUGFeRD",
     "offene posten",
     "DATEV",
+    "kassenbuch",
+    "kostenstellen",
     "bankumsätze",
     "accounting",
     "invoices",

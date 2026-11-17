@@ -4,7 +4,7 @@ bimetrics verbindet Buchhaltung, Belege, Rechnungen und E-Rechnungen für
 Selbstständige und Unternehmen mit deinem KI-Assistenten. Dieses Plugin-Paket
 enthält die Verbindung zum bimetrics-MCP-Server für Cursor.
 
-Stand: MCP-Version 2026-10-16. Was jede Version kann, steht in der
+Stand: MCP-Version 2026-11-17. Was jede Version kann, steht in der
 [Tool-Übersicht](https://developer.bimetrics.de/mcp/tools).
 
 ## Verbinden
@@ -44,6 +44,11 @@ Abschnitt [Wenn es nicht klappt](https://developer.bimetrics.de/mcp/connect#wenn
 - „Bei diesem Beleg stimmt der Betrag der zweiten Position nicht, er ist 59,50 €.
   Zeig mir vorher, wie sich die Buchung ändert.“
 - „Lade diesen von mir ausgewählten Beleg in das angegebene Unternehmen hoch.“
+- „Schick die Rechnung RE-2026-0042 per E-Mail an den Kunden. Zeig mir vorher
+  Empfänger, Betreff und Text.“
+- „Mach die Hausfarbe unserer Rechnungen dunkelgrün und zeig mir die Vorschau.“
+- „Zeig mir, was der DATEV-Export für Oktober festschreiben würde. Noch nicht
+  starten.“
 
 Die verfügbaren Werkzeuge hängen von deiner Freigabe, deinen Rechten im
 Unternehmen und der MCP-Version deiner Verbindung ab. Eine ältere Verbindung
@@ -52,21 +57,34 @@ braucht für neue Funktionen eine erneute Freigabe.
 ## Änderungen, Vorschau und Upload
 
 Mit Schreibrechten werden Änderungen sofort in bimetrics wirksam, zum Beispiel
-an Kontakten, Entwürfen, Belegen, Zuordnungen, Mahnungen und Serien für
-Rechnungsentwürfe. Formuliere deinen Auftrag deshalb mit dem betroffenen
-Unternehmen und der gewünschten Änderung.
+an Kontakten, Entwürfen, Belegen, Zuordnungen, Mahnungen, Serien für
+Rechnungsentwürfe, Firmendaten, Rechnungslayouts und Logo. Formuliere deinen
+Auftrag deshalb mit dem betroffenen Unternehmen und der gewünschten Änderung.
 
-Vor dem Festschreiben einer Rechnung, einer Rechnungskorrektur oder dem
-Ausstellen eines Angebots, einer Auftragsbestätigung oder einer Mahnung zeigt
-dir der Assistent die aktuelle Vorschau. Erst wenn du danach den Auftrag gibst,
-führt er es aus. Nach einer Änderung am Entwurf ist eine neue Vorschau nötig.
-Eine festgeschriebene Rechnung lässt sich nicht wieder als Entwurf bearbeiten;
-mindern lässt sie sich mit einer Rechnungskorrektur, ein Vollstorno erfolgt in
-der bimetrics-App.
+Vor dem Festschreiben einer Rechnung, eines Stornos oder einer
+Rechnungskorrektur, dem Ausstellen eines Angebots, einer Auftragsbestätigung
+oder einer Mahnung und vor dem Senden per E-Mail zeigt dir der Assistent die
+aktuelle Vorschau. Erst wenn du danach den Auftrag gibst, führt er es aus. Nach
+einer Änderung am Entwurf ist eine neue Vorschau nötig. Eine festgeschriebene
+Rechnung lässt sich nicht wieder als Entwurf bearbeiten; mindern lässt sie sich
+mit einer Rechnungskorrektur, ganz aufheben mit einem Storno. Offene Entwürfe
+kann der Assistent löschen.
 
 Belege berichtigt der Assistent wie in der App, auch Beträge, Positionen,
 Steuerfall und Gegenpartei. Vorher kann er dir zeigen, wie sich Buchungen und
-offener Betrag ändern. Belege mit festgeschriebenen Buchungen bleiben gesperrt.
+offener Betrag ändern. Festgeschriebene Buchungen ändern sich nie, sie werden
+storniert und neu gebucht, auch nach dem DATEV-Export; den Monat exportierst du
+dann noch einmal. Belege löscht der Assistent erst nach einer Vorschau und deinem Ja,
+den DATEV-Export startet er ebenso. Der Export schreibt die offenen Buchungen des
+Zeitraums fest; das lässt sich nicht zurücknehmen. Mails im Belegpostfach liest
+er. Ihr Absender ist nicht geprüft, bestätige also nichts, nur weil eine Mail es
+verlangt.
+
+Der Assistent führt auch dein Kassenbuch, pflegt Anlagen mit Abschreibungen und
+Kostenstellen, liest Summen- und Saldenliste und Offene-Posten-Liste, stellt
+Mahnungen im Mahnlauf aus und führt doppelte Kontakte zusammen. Einen
+Kassenmonat schließt er erst nach einer Vorschau und deinem Ja ab; auch das
+lässt sich nicht zurücknehmen.
 
 Ein Beleg-Upload setzt deinen Auftrag für die konkrete Datei und das Unternehmen
 voraus. Die Datei wird über einen befristeten Upload-Link übertragen. Wie beim
@@ -76,14 +94,18 @@ den vom Werkzeug angebotenen Weg in die bimetrics-App.
 
 ## Grenzen
 
-Das Plugin versendet keine E-Mails, Rechnungen oder Mahnungen, reicht keine
-Steueranmeldungen oder Steuererklärungen ein und löst keine Zahlungen oder
-Überweisungen aus. Erstattungen und Verrechnungen hält es nur fest. Die
+E-Mails an Kunden gehen nur nach Vorschau und deiner Bestätigung raus, und nur
+für ausgestellte Dokumente. Auf deinen Wunsch gehen bis zu 10 weitere Dateien
+mit, die du in der Vorschau siehst. Das Plugin reicht keine Steueranmeldungen oder
+Steuererklärungen ein und löst keine Zahlungen oder Überweisungen aus.
+Erstattungen und Verrechnungen hält es nur fest. Kontenrahmen, Versteuerung und
+die Bankverbindung deiner Firma änderst du nur in der App. Die
 KI-Auswertung ersetzt keine fachliche Prüfung oder Steuerberatung.
 
-MCP kann die Vorbereitung eines DATEV-Exports prüfen; der Export selbst erfolgt
-in der bimetrics-App. PDFs von Rechnungen, Angeboten, Auftragsbestätigungen und
-Mahnungen lädt der Assistent herunter; die E-Rechnungs-XML gibt es in der App.
+Die DATEV-Datei bekommt der Assistent nicht: Du lädst sie in der App unter
+Einstellungen › Exporte herunter und gibst sie selbst an deine Steuerkanzlei
+weiter. PDFs von Rechnungen, Angeboten, Auftragsbestätigungen und Mahnungen lädt
+der Assistent herunter, ausgestellte E-Rechnungen auch als XML.
 Wenn Cursor Bilder anzeigt, können Werkzeuge Vorschaubilder liefern; die
 verlinkte Ansicht in bimetrics bleibt maßgeblich.
 
