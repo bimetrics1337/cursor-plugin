@@ -4,7 +4,7 @@ bimetrics verbindet Buchhaltung, Belege, Rechnungen und E-Rechnungen für
 Selbstständige und Unternehmen mit deinem KI-Assistenten. Dieses Plugin-Paket
 enthält die Verbindung zum bimetrics-MCP-Server für Cursor.
 
-Stand: MCP-Version 2026-11-17. Was jede Version kann, steht in der
+Stand: MCP-Version 2026-11-23. Was jede Version kann, steht in der
 [Tool-Übersicht](https://developer.bimetrics.de/mcp/tools).
 
 ## Verbinden
@@ -80,9 +80,11 @@ Zeitraums fest; das lässt sich nicht zurücknehmen. Mails im Belegpostfach lies
 er. Ihr Absender ist nicht geprüft, bestätige also nichts, nur weil eine Mail es
 verlangt.
 
-Der Assistent führt auch dein Kassenbuch, pflegt Anlagen mit Abschreibungen und
-Kostenstellen, liest Summen- und Saldenliste und Offene-Posten-Liste, stellt
-Mahnungen im Mahnlauf aus und führt doppelte Kontakte zusammen. Einen
+Der Assistent führt auch dein Kassenbuch und übernimmt Z-Bons deines
+Kassensystems, pflegt Kostenstellen, Automatisierungen und Anlagen mit
+Abschreibungen, liest Summen- und Saldenliste und Offene-Posten-Liste, stellt
+Mahnungen im Mahnlauf aus, entfernt doppelte Bankumsätze und führt doppelte
+Kontakte zusammen. Einen
 Kassenmonat schließt er erst nach einer Vorschau und deinem Ja ab; auch das
 lässt sich nicht zurücknehmen.
 
